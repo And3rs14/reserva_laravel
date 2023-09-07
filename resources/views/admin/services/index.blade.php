@@ -28,6 +28,9 @@
                         {{ trans('cruds.service.fields.name') }}
                     </th>
                     <th>
+                        {{ trans('cruds.service.fields.image') }}
+                    </th>
+                    <th>
                         {{ trans('cruds.service.fields.price') }}
                     </th>
                     <th>
@@ -87,6 +90,7 @@
       { data: 'placeholder', name: 'placeholder' },
 { data: 'id', name: 'id' },
 { data: 'name', name: 'name' },
+{ data: 'image', name: 'image' },
 { data: 'price', name: 'price' },
 { data: 'actions', name: '{{ trans('global.actions') }}' }
     ],

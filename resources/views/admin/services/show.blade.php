@@ -28,6 +28,14 @@
                     </tr>
                     <tr>
                         <th>
+                            {{ trans('cruds.service.fields.image') }}
+                        </th>
+                        <td>
+                            {{ $service->image }}
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
                             {{ trans('cruds.service.fields.price') }}
                         </th>
                         <td>

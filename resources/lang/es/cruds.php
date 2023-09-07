@@ -73,6 +73,8 @@ return [
             'id_helper'         => '',
             'name'              => 'Nombre',
             'name_helper'       => '',
+            'image'              => 'Imagen',
+            'image_helper'       => '',
             'price'             => 'Precio',
             'price_helper'      => '',
             'created_at'        => 'Creado el',

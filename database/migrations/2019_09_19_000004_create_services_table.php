@@ -12,6 +12,7 @@ class CreateServicesTable extends Migration
             $table->increments('id');
 
             $table->string('name');
+            $table->string('image')->nullable(); // Añade esta línea para la columna de imagen
 
             $table->decimal('price', 15, 2)->nullable();
 
