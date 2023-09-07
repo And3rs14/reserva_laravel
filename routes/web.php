@@ -1,8 +1,13 @@
 <?php
 
-Route::redirect('/', '/login');
+
+
+
+Route::get('/', function () {
+    return view('welcome');
+});
 Route::redirect('/home', '/admin');
-Auth::routes(['register' => false]);
+Auth::routes(['register' => true]);
 
 Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'Admin', 'middleware' => ['auth']], function () {
     Route::get('/', 'HomeController@index')->name('home');
