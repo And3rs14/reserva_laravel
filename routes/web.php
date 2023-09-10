@@ -1,12 +1,17 @@
 <?php
 
-
-
-
 Route::get('/', function () {
     return view('welcome');
 });
-Route::redirect('/home', '/admin');
+
+// Route::redirect('/home', '/admin');
+
+
+Route::redirect('/home', '/dashboard');
+
+Route::get('/dashboard', '\App\Http\Controllers\admin\DashboardCalendarController@index');
+
+
 Auth::routes(['register' => true]);
 
 Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'Admin', 'middleware' => ['auth']], function () {
