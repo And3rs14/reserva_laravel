@@ -97,7 +97,10 @@
                 <a href="#">Menú &#9662;</a>
                 <div class="dropdown-content">
                     <a href="#">Ver perfil</a>
+                    @can('user_management_access')
                     <a href="http://laravel-appointments.io/admin">Entrar a la intranet</a>
+                    @endcan
+
                     <a href="#"
                         onclick="event.preventDefault(); document.getElementById('logoutform').submit();">Desloguearse</a>
                 </div>
