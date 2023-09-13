@@ -17,8 +17,6 @@
                                 href='https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.1.0/fullcalendar.min.css' />
 
                             <div id='calendar'></div>
-
-
                         </div>
                     </div>
                 </div>
@@ -29,7 +27,11 @@
                         <!-- Aquí aplicamos display: flex; justify-content: center; y align-items: center; para centrar el botón -->
                         <div class="p-6 text-gray-900"
                             style="display: flex; justify-content: center; align-items: center; height: 100%;">
-                            <button type="button" onclick="alert('Cita Reservada')">Reservar Cita</button>
+                            <button type="button" class="btn btn-primary" data-toggle="modal"
+                                data-target="#reservarCitaModal">
+                                Reservar Cita
+                            </button>
+
                         </div>
                     </div>
                 </div>
@@ -39,6 +41,8 @@
             </div>
         </div>
     </div>
+    {{-- @yield('reservar_cita_modal') --}}
+    @include('dashboard.reservar_cita_modal')
 @endsection
 
 
@@ -57,4 +61,5 @@
             })
         })
     </script>
+
 @stop

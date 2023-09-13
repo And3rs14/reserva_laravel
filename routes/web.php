@@ -9,6 +9,11 @@ Route::get('/', 'HomeController@index');
 Route::redirect('/home', '/dashboard');
 
 Route::get('/dashboard', '\App\Http\Controllers\admin\DashboardCalendarController@index');
+// Route::post('/dashboard', '\App\Http\Controllers\admin\DashboardCalendarController@store')->name('admin.dashboardCalendar.store');
+
+// Route::get('/reservar-cita', '\App\Http\Controllers\admin\DashboardCalendarController@index');
+// Route::post('/reservar-cita', 'ModalController@store')->name('reservarCita.store');
+
 
 
 Auth::routes(['register' => true]);
