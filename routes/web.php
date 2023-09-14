@@ -9,7 +9,7 @@ Route::get('/', 'HomeController@index');
 
 
 Route::get('/dashboard', '\App\Http\Controllers\admin\AppointmentsController@index');
-Route::redirect('/home', '/admin');
+Route::redirect('/home', '/admin/appointments');
 Auth::routes(['register' => false]);
 
 Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'Admin', 'middleware' => ['auth']], function () {

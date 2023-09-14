@@ -88,7 +88,7 @@
                                         <h3>{{ $loop->iteration }}</h3>
                                         <img class="mt-4" src="{{ asset($service->image) }}" alt="{{ $service->name }}">
                                         <center class="mt-2">{{ $service->name }}</center>
-                                        {{-- <center class="mt-2">Precio: S/.{{ number_format($service->price, 2) }}</center> --}}
+                                        <center class="mt-2">Precio: S/.{{ number_format($service->price, 2) }}</center>
                                     </div>
                                 @endforeach
 
