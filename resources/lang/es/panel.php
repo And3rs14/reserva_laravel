@@ -1,5 +1,5 @@
 <?php
 
 return [
-    'site_title' => 'Citas',
+    'site_title' => 'Siempre Bella & Divina',
 ];

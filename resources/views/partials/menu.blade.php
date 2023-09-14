@@ -1,7 +1,7 @@
 <div class="sidebar">
     <nav class="sidebar-nav">
 
-        <ul class="nav">
+        <ul class="nav" style="background-color: black;">
             {{-- <li class="nav-item">
                 <a href="{{ route("admin.home") }}" class="nav-link">
                     <i class="nav-icon fas fa-fw fa-tachometer-alt">
@@ -113,3 +113,4 @@
     </nav>
     <button class="sidebar-minimizer brand-minimizer" type="button"></button>
 </div>
+

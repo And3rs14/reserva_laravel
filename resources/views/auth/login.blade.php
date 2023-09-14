@@ -12,7 +12,13 @@
                     @endif
                     <form method="POST" action="{{ route('login') }}">
                         {{ csrf_field() }}
-                        <h1>{{ trans('panel.site_title') }}</h1>
+                        <!-- Logo -->
+                <div class="shrink-0 flex items-center">
+                    <a href="#">
+                        <center><img src="/img/logo/logo.png" alt="Logo"></center>
+                    </a>
+                </div>
+                        <center><h1>{{ trans('panel.site_title') }}</h1></center>
                         <p class="text-muted">{{ trans('global.login') }}</p>
 
                         <div class="input-group mb-3">
@@ -52,7 +58,7 @@
 
                         <div class="row">
                             <div class="col-6">
-                                <button type="submit" class="btn btn-primary px-4">
+                                <button type="submit" class="btn btn-primary px-4" style="background-color: black">
                                     {{ trans('global.login') }}
                                 </button>
                             </div>
