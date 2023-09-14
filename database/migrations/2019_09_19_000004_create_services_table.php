@@ -21,3 +21,4 @@ class CreateServicesTable extends Migration
         });
     }
 }
+
