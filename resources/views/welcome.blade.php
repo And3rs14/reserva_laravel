@@ -78,38 +78,25 @@
                     </a>
                     </div>
                 </header>
-        <div class="py-10">
-            <div class="max-w-7xl mx-auto sm:px-15 lg:px-16">
-                <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
-                    <div class="owl-carousel owl-theme mt-10">
-                        <div class="item font-semibold"><h3>1</h3>
-                            <img class="mt-4" src="/img/home/6.jpg" alt="img1">
-                            <center class="mt-2">CORTES DE CABELLO</center>
-                        </div>
-                        <div class="item font-semibold"><h3>2</h3>
-                            <img class="mt-4" src="/img/home/3.jpg" alt="img1">
-                            <center class="mt-2">LACIADOS</center>
-                        </div>
-                        <div class="item font-semibold"><h4>3</h4>
-                            <img class="mt-4" src="/img/home/1.jpg" alt="img1">
-                            <center class="mt-2">MANICURE</center>
-                        </div>
-                        <div class="item font-semibold"><h4>4</h4>
-                            <img class="mt-4" src="/img/home/2.jpeg" alt="img1">
-                            <center class="mt-2">PEDICURE</center>
-                        </div>
-                        <div class="item font-semibold"><h4>5</h4>
-                            <img class="mt-4" src="/img/home/4.jpg" alt="img1">
-                            <center class="mt-2">MAQUILLAJES</center>
-                        </div>
-                        <div class="item font-semibold"><h4>6</h4>
-                            <img class="mt-4" src="/img/home/5.jpg" alt="img1">
-                            <center class="mt-2">LIFTING DE PESTAÑAS</center>
+                <div class="py-10">
+                    <div class="max-w-7xl mx-auto sm:px-15 lg:px-16">
+                        <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
+                            <div class="owl-carousel owl-theme mt-10">
+
+                                @foreach($services as $service)
+                                    <div class="item font-semibold">
+                                        <h3>{{ $loop->iteration }}</h3>
+                                        <img class="mt-4" src="{{ asset($service->image) }}" alt="{{ $service->name }}">
+                                        <center class="mt-2">{{ $service->name }}</center>
+                                        {{-- <center class="mt-2">Precio: S/.{{ number_format($service->price, 2) }}</center> --}}
+                                    </div>
+                                @endforeach
+
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
+
         <div><p></p></div>
 
 

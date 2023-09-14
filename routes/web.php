@@ -1,11 +1,11 @@
 <?php
 
 
+Route::get('/', 'HomeController@index');
 
-
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
 Route::redirect('/home', '/admin');
 Auth::routes(['register' => true]);
 
